@@ -18,21 +18,15 @@ function newItem(){
 		li.toggleClass("strike");
 	});
 
-  let crossOutButton = document.createElement("crossOutButton");
- 	crossOutButton.appendChild(document.createTextNode("X"));
- 	li.appendChild(crossOutButton);
-
- 	crossOutButton.addEventListener("click", deleteListItem);
-
-  let crossOutButton = $("<crossOutButton></crossOutButton>");
+  let crossOutButton = $('<crossOutButton></crossOutButton>');
   crossOutButton.append(document.createTextNode('X'));
   li.append(crossOutButton);
 
   crossOutButton.on("click", deleteListItem);
-  function deleteListItem() {
+  function deleteListItem(){
     li.addClass("delete")
   }
 
-  $('#list').sortable();
+   $('#list').sortable();
 
 }
